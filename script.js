@@ -3,10 +3,7 @@ let searchBth = document.getElementById("search-bth");
 let searchResult = document.getElementById("Search-result");
 let searchMore = document.getElementById("Search-more");
 let searchForm = document.getElementById("search-input");
-let resetBtn = document.getElementById('reset-icon');
-
-
-
+let resetBtn = document.getElementById("reset-icon");
 
 let keyword = "";
 let page = 1;
@@ -33,8 +30,7 @@ async function searchImage() {
     imageLink.appendChild(image);
     searchResult.appendChild(imageLink);
     searchMore.style.display = "block";
-      searchResult.style.display = "flex";
-
+    searchResult.style.display = "flex";
   });
 }
 
@@ -47,9 +43,9 @@ searchMore.addEventListener("click", () => {
   page++;
   searchImage();
 });
-resetBtn.addEventListener('click',()=>{
-    searchResult.innerHTML = "";
-    searchInput.value="";
-    searchResult.style.display = "none";
-    searchMore.style.display = "none";
-})
+resetBtn.addEventListener("click", () => {
+  searchResult.innerHTML = "";
+  searchInput.value = "";
+  searchResult.style.display = "none";
+  searchMore.style.display = "none";
+});
